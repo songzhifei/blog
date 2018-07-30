@@ -23,7 +23,34 @@ public class UserController {
 		int userId = Integer.parseInt(request.getParameter("id"));
 		User user = this.userService.getUserById(userId);
 		model.addAttribute("user",user);
-		
 		return "showUser";
+	}
+	@RequestMapping("/showUser2")
+	public String toIndex2(HttpServletRequest request,Model model)
+	{
+		int userId = Integer.parseInt(request.getParameter("id"));
+		User user = this.userService.getUserById(userId);
+		model.addAttribute("user",user);
+		return "showUser2";
+	}
+	@RequestMapping("/login")
+	public String toTest(HttpServletRequest request,Model model)
+	{
+		return "userLogin";
+	}
+	@RequestMapping("/test2")
+	public String toTest2(HttpServletRequest request,Model model)
+	{
+		return "test2";
+	}
+	@RequestMapping("/userLogin")
+	public String toLogin(HttpServletRequest request,Model model)
+	{
+		return "userLogin";
+	}
+	@RequestMapping("/LoginUser")
+	public String toLoginUser(HttpServletRequest request,Model model)
+	{
+		return "LoginUser";
 	}
 }

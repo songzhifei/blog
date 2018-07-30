@@ -7,6 +7,6 @@
 		<title>测试</title>
 	</head>
 	<body>
-		${user.getUsername()}
+		123
 	</body>
 </html>
